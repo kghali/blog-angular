@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': post.loveIts>0,
+                'list-group-item-danger': post.loveIts<0}">
+  <h4>
+    {{post.title}}
+    <button class="btn btn-danger pull-right" (click)="onDeletePost(post)">Supprimer post</button>
+  </h4>
+  <p><em>{{post.createdAt | date: 'dd/MM/yyyy HH:mm'}}</em></p>
+  <p>{{post.content}}</p>
+  <div class="btn-toolbar">
+    <button type="button" class="btn btn-default btn-sm" (click)="updateLoveIts(1)">
+      <span class="glyphicon glyphicon-thumbs-up"></span> Love it
+    </button>
+    <button type="button" class="btn btn-default btn-sm" (click)="updateLoveIts(-1)">
+      <span class="glyphicon glyphicon-thumbs-down"></span> Don't love it
+    </button>
+  </div>
+  <p>loveIts: {{post.loveIts}}</p>
+</li>
