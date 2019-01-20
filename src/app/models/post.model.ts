@@ -2,12 +2,11 @@ export class Post {
     public title: string;
     public content: string;
     public loveIts: number;
-    public createdAt: Date;
+    public createdAt: any;
     constructor(title: string,
-                content: string,
-                createdAt: Date) {
+                content: string) {
         this.title = title;
         this.content = content;
-        this.createdAt = createdAt;
+        this.loveIts = 0;
       }
 }
