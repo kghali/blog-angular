@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Post } from '../post';
+import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-post-list-item-component',
@@ -17,8 +17,8 @@ export class PostListItemComponentComponent implements OnInit {
     this.post.loveIts = 0;
   }
   //Méthode pour la mise à jour du nombre de loveIt du post
-  updateLoveIts(n: number){
-    this.post.loveIts += n;  
+  updateLoveIts(n: number) {
+    this.post.loveIts += n;
   }
 
 }
